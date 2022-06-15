@@ -34,29 +34,13 @@ function Home({ cards }) {
       <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Привет, Вася!</h2>
       {/* Тут надо вставить имя пользователя */}
 
-      {/* <div style={{
-        // width: '100%',
-        // Надо понять как выровнять блоки по центру и добавить между блоками отступы
-        marginTop: '50px',
-        display: 'flex',
-        justifyContent: 'center',
-        maxWidth: '1200px',
-        flexFlow: 'row wrap',
-        // width: '100%',
-        // backgroundColor: 'red',
-        // padding: '10px',
-        // Нужно понять как переносить блоки на новую строку. когда места не хватает
-      }}
-      > */}
-
       <div className="container-fluid">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
           {cards.map((card) => (
             <Card card={card} />
           ))}
         </div>
       </div>
-      {/* </div> */}
 
     </Layout>
   );
