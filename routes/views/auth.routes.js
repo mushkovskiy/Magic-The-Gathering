@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const Main = require('../../views/Main');
 const Reg = require('../../views/Reg');
 const Log = require('../../views/Log');
-const { User } = require('../db/models');
+const { User } = require('../../db/models');
 
 authRouter.get('/', (req, res) => {
   const element = React.createElement(Main);
