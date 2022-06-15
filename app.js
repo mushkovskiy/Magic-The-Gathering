@@ -25,6 +25,7 @@ const path = require('path');
 // };
 
 const authRouter = require('./routes/views/auth.routes');
+const homeRouter = require('./routes/views/home.routes');
 
 const app = express();
 const PORT = 3000;
@@ -38,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/', authRouter);
+app.use(homeRouter);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
@@ -52,4 +54,3 @@ app.listen(PORT, async () => {
   }
   /* eslint-enable */
 });
-
