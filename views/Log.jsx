@@ -4,13 +4,24 @@ const Layout = require('./Layout');
 function Log() {
   return (
     <Layout>
-
-      <div>
-        <p>Авторизация</p>
-        <form method="post" action="/log" />
-        <input name="login" type="text" placeholder="Login" />
-        <input name="password" type="password" placeholder="Password" />
-        <button type="submit">Зайти на сайт</button>
+      <h2 style={{ textAlign: 'center', margin: '20px' }}>Авторизация</h2>
+      <div style={{ width: '400px' }}>
+        <form method="post" action="/log">
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Логин:</label>
+            <div className="col-sm-10">
+              <input name="login" type="text" className="form-control" id="inputEmail3" placeholder="Логин" />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Пароль:</label>
+            <div className="col-sm-10">
+              <input name="password" type="password" placeholder="Пароль" className="form-control" id="inputPassword3" />
+            </div>
+          </div>
+          <button type="submit" className="btn btn-primary">Войти</button>
+          {/* Осталось понять как выровнять кнопку по центру */}
+        </form>
       </div>
 
       {/* <script defer src="/main.js" /> */}
