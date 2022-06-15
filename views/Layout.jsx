@@ -2,7 +2,7 @@ const React = require('react');
 
 function Layout({ children }) {
   return (
-    <html lang="ru">
+    <html lang="ru" style={{ height: '100%' }}>
       <head>
         <meta charSet="utf-8" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossOrigin="anonymous" />
@@ -18,7 +18,15 @@ function Layout({ children }) {
         <title>The Gathering</title>
         <meta charSet="utf-8" />
       </head>
-      <body>
+      <body style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        width: '100%',
+        minHeight: '100%',
+      }}
+      >
         <header>
           {/* <div className="container px-4 px-lg-5 text-center"> */}
           {children}
