@@ -32,10 +32,8 @@ function Home({ cards, user }) {
         </div>
       </nav>
 
-      <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>
-        Привет,
-        {user.name}
-        !
+      <h2 style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '20px' }}>
+        {`Привет, ${user.name}!`}
       </h2>
 
       <div className="container-fluid">
