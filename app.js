@@ -4,6 +4,7 @@ const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 
 const express = require('express');
+
 const logger = require('morgan');
 const path = require('path');
 
@@ -24,31 +25,36 @@ const sessionConfig = {
 };
 const { sequelize } = require('./db/models');
 
+
 const authRouter = require('./routes/views/auth.routes');
+const homeRouter = require('./routes/views/home.routes');
 
 const app = express();
+
 
 const PORT = 3000;
 
 app.use(cookieParser());
 app.use(session(sessionConfig));
+
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/', authRouter);
+app.use(homeRouter);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
   console.log('Веб-сервер слушает порт', PORT);
 
-  try {
-    await sequelize.authenticate();
-    console.log('БД-сервер подключен успешно');
-  } catch (error) {
-    console.log('БД-сервер не подключен');
-    console.log(error.message);
-  }
+  // try {
+  //   await sequelize.authenticate();
+  //   console.log('БД-сервер подключен успешно');
+  // } catch (error) {
+  //   console.log('БД-сервер не подключен');
+  //   console.log(error.message);
+  // }
   /* eslint-enable */
 });
