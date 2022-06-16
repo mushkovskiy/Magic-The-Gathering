@@ -12,6 +12,13 @@ function Card({ card }) {
           <li className="list-group-item">{card.condition}</li>
           <li className="list-group-item">{card.price}</li>
           <li className="list-group-item">{card.user_id}</li>
+          <li>
+            {' '}
+            <a href={`/add/${card.id}`}>
+              {' '}
+              <button type="submit" className="btn btn-primary">Войти</button>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

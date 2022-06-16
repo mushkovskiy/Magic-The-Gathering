@@ -25,9 +25,12 @@ const sessionConfig = {
 };
 const { sequelize } = require('./db/models');
 
+const basketRouter = require('./routes/views/basket.routes');
+const personRouter = require('./routes/views/person.routes');
+const cardRouter = require('./routes/api/card.router');
 const authRouter = require('./routes/views/auth.routes');
 const homeRouter = require('./routes/views/home.routes');
-const basketRouter = require('./routes/views/basket.routes');
+const addCards = require('./routes/views/add.cards.routers');
 
 const app = express();
 
@@ -41,9 +44,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/', authRouter);
+app.use(authRouter);
 app.use(homeRouter);
 app.use(basketRouter);
+app.use(addCards);
+app.use(personRouter);
+app.use(cardRouter);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */

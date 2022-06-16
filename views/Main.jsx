@@ -24,7 +24,6 @@ function Main() {
       </nav>
 
       <h1 style={{ margin: '40px', textAlign: 'center' }}>MAGIC: THE GATHERING</h1>
-      {/* https://www.sunhome.ru/i/wallpapers/84/magic-the-gathering.orig.jpg */}
 
       {/* Нужно впилить сюда какой то текст про эту игру */}
 
@@ -36,7 +35,6 @@ function Main() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            {/* Нужно понять как прописать путь к картинкам в папке img и задать высоту */}
             <img src="./img/img1.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
           </div>
           <div className="carousel-item">
@@ -55,8 +53,6 @@ function Main() {
           <span className="visually-hidden">Следующий</span>
         </button>
       </div>
-
-      {/* <script defer src="/main.js" /> */}
     </Layout>
   );
 }
