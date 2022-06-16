@@ -25,8 +25,6 @@ authRouter.get('/reg', (req, res) => {
 });
 
 authRouter.post('/reg', async (req, res) => {
-  // console.log(req.body);
-  // console.log(req.params);
   const {
     name, login, password, email, city,
   } = req.body;
@@ -47,9 +45,6 @@ authRouter.post('/reg', async (req, res) => {
 });
 
 authRouter.get('/log', (req, res) => {
-  // console.log(req.body);
-  // console.log(req.params);
-  // console.log(req.query);
   const element = React.createElement(Log);
   const html = ReactDOMServer.renderToStaticMarkup(element);
   res.write('<!DOCTYPE html>');
