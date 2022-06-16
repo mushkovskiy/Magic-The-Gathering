@@ -1,8 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 const Card = require('./Card');
+//const User = require('../db/models/user');
 
-function Home({ cards }) {
+function Home({ cards, user }) {
   return (
     <Layout>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +21,7 @@ function Home({ cards }) {
                 <a className="nav-link" href="/">Корзина</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Выход</a>
+                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
               </li>
             </ul>
             <form className="d-flex">
@@ -31,7 +32,11 @@ function Home({ cards }) {
         </div>
       </nav>
 
-      <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Привет, Вася!</h2>
+      <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>
+        Привет,
+        {user.name}
+        !
+      </h2>
       {/* Тут надо вставить имя пользователя */}
 
       <div className="container-fluid">
