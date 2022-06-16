@@ -18,7 +18,7 @@ function Home({ cards, user }) {
                 <a className="nav-link" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Корзина</a>
+                <a className="nav-link" href="/create/basket">Корзина</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
