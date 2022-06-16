@@ -137,6 +137,8 @@ const cards = [
 
 homeRouter.get('/home', async (req, res) => {
   console.log(req.session);
+  // console.log(req.body);
+  console.log(req.session.userId);
   const user = await User.findOne({ where: { id: req.session.userId } });
   const home = React.createElement(Home, { cards, user });
   const html = ReactDOMServer.renderToStaticMarkup(home);

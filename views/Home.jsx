@@ -24,18 +24,18 @@ function Home({ cards, user }) {
                 <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <select className="form-select" aria-label="Default select example">
+            <form className="d-flex fetch">
+              <select name="selector" className="form-select" aria-label="Default select example">
                 <option selected>Выберите город:</option>
-                <option value="1">Санкт-Петербург</option>
-                <option value="2">Москва</option>
-                <option value="3">Саратов</option>
-                <option value="4">Выборг</option>
-                <option value="5">Уфа</option>
-                <option value="6">Нижний Новгород</option>
-                <option value="7">Сочи</option>
-                <option value="8">Мурманск</option>
-                <option value="9">Нерюнгри</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Москва">Москва</option>
+                <option value="Саратов">Саратов</option>
+                <option value="Выборг">Выборг</option>
+                <option value="Уфа">Уфа</option>
+                <option value="Нижний Новгород">Нижний Новгород</option>
+                <option value="Сочи">Сочи</option>
+                <option value="Мурманск">Мурманск</option>
+                <option value="Нерюнгри">Нерюнгри</option>
               </select>
               <button className="btn btn-outline-success" type="submit">Поиск</button>
             </form>
@@ -47,13 +47,14 @@ function Home({ cards, user }) {
         {`Привет, ${user.name}!`}
       </h2>
 
-      <div className="container-fluid">
+      <div className="container-fluid home-div">
         <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
           {cards.map((card) => (
             <Card key={card.id} card={card} />
           ))}
         </div>
       </div>
+      <script defer src="./script.js" />
     </Layout>
   );
 }

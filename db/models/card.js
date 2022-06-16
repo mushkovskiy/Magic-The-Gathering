@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Basket }) {
+    static associate({ Basket, User }) {
       Card.Basket = Card.hasMany(Basket, { foreignKey: 'card_id' });
+      Card.User = Card.belongsTo(User, { foreignKey: 'user_id' });
     }
   }
   Card.init({
@@ -25,6 +26,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     condition: {
       type: DataTypes.TEXT,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id',
+      },
     },
   }, {
     sequelize,
