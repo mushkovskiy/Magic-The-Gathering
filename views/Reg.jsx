@@ -54,7 +54,7 @@ function Reg() {
               <input name="city" type="text" placeholder="Город" className="form-control" id="inputCity3" />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
+          <button type="submit" className="btn btn-primary btn-reg">Зарегистрироваться</button>
           {/* Осталось понять как выровнять кнопку по центру */}
         </form>
       </div>

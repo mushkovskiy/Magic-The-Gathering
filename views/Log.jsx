@@ -36,7 +36,7 @@ function Log() {
               <input name="password" type="password" placeholder="Пароль" className="form-control" id="inputPassword3" />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Войти</button>
+          <button type="submit" className="btn btn-primary btn-lg">Войти</button>
           {/* Осталось понять как выровнять кнопку по центру */}
         </form>
       </div>
