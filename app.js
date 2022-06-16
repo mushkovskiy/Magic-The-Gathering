@@ -25,12 +25,11 @@ const sessionConfig = {
 };
 const { sequelize } = require('./db/models');
 
-
 const authRouter = require('./routes/views/auth.routes');
 const homeRouter = require('./routes/views/home.routes');
+const addCards = require('./routes/views/add.cards.routers');
 
 const app = express();
-
 
 const PORT = 3000;
 
@@ -44,6 +43,7 @@ app.use(express.json());
 
 app.use('/', authRouter);
 app.use(homeRouter);
+app.use(addCards);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
