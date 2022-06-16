@@ -10,7 +10,6 @@ const { User } = require('../../db/models');
 // session-file-store = function (session) {
 //   return require('./lib/session-file-store')(session);
 
-
 authRouter.get('/', (req, res) => {
   const element = React.createElement(Main);
   const html = ReactDOMServer.renderToStaticMarkup(element);
@@ -44,7 +43,6 @@ authRouter.post('/reg', async (req, res) => {
     email,
     city,
   });
-  // req.session.userId = user.id;
   res.redirect('/log');
 });
 
@@ -69,6 +67,15 @@ authRouter.post('/log', async (req, res) => {
     return res.redirect('/home');
   }
   res.send('Неверно введены логин или пароль'); // нужно заменить на красивую отрисовку
+});
+authRouter.get('/logout', (req, res) => {
+  // new filestore({ logFn() {} });
+  req.session.destroy((err) => {
+    if (err) { console.log(err.message); }
+  });
+  res.clearCookie('user_sid'); // чистим куки. название берем из app.js : const sessionConfig = {... name: 'user_sid',...}
+  // при переходе на ручку /logout очищаем сессию и редеректимся на главную страницу
+  res.redirect('/');
 });
 
 module.exports = authRouter;
