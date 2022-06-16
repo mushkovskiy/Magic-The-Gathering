@@ -33,30 +33,31 @@ function PersonArea() {
           <div className="row mb-3" style={{ width: '700px' }}>
             <label htmlFor="inputName1" className="col-sm-2 col-form-label">Название:</label>
             <div className="col-sm-10">
-              <input name="login" type="text" className="form-control" id="inputName1" placeholder="Логин" />
+              <input name="name" type="text" className="form-control" id="inputName1" placeholder="Название" />
             </div>
           </div>
           <div className="row mb-3" style={{ width: '700px' }}>
             <label htmlFor="inputPhoto1" className="col-sm-2 col-form-label">Фото:</label>
             <div className="col-sm-10">
-              <input name="password" type="text" placeholder="Фото" className="form-control" id="inputPhoto1" />
+              <input name="photo" type="text" placeholder="Фото" className="form-control" id="inputPhoto1" />
             </div>
           </div>
           <div className="row mb-3" style={{ width: '700px' }}>
             <label htmlFor="inputPrice1" className="col-sm-2 col-form-label">Цена:</label>
             <div className="col-sm-10">
-              <input name="login" type="text" className="form-control" id="inputPrice1" placeholder="Цена" />
+              <input name="price" type="text" className="form-control" id="inputPrice1" placeholder="Цена" />
             </div>
           </div>
           <div className="row mb-3" style={{ width: '700px' }}>
             <label htmlFor="inputIznos1" className="col-sm-2 col-form-label">Изношеность:</label>
             <div className="col-sm-10">
-              <input name="password" type="password" placeholder="Степень изношености" className="form-control" id="inputIznos1" />
+              <input name="condition" type="text" placeholder="Степень изношености" className="form-control" id="inputIznos1" />
             </div>
           </div>
           <button type="submit" className="btn btn-primary">Добавить</button>
           {/* Осталось понять как выровнять кнопку по центру */}
 
+          <script defer src="/application.js" />
         </form>
       </div>
 
