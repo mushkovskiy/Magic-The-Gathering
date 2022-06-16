@@ -6,7 +6,7 @@ function Layout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossOrigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="/style.css" />
+        {/* <link defer rel="stylesheet" type="text/css" href="./public/style" /> */}
         {/* <link rel="stylesheet" href="/stylesheets/normalize.css" />
         <link rel="stylesheet" href="/stylesheets/application.css" /> */}
 
@@ -18,6 +18,7 @@ function Layout({ children }) {
 
         <title>The Gathering</title>
         <meta charSet="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/style.css" />
       </head>
       <body style={{
         display: 'flex',

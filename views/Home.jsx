@@ -15,13 +15,13 @@ function Home({ cards, user }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/personArea">Добавить карточку</a>
+                <a className="nav-link" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">Корзина</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
+                <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
             </ul>
             <form className="d-flex">
@@ -37,7 +37,6 @@ function Home({ cards, user }) {
         {user.name}
         !
       </h2>
-      {/* Тут надо вставить имя пользователя */}
 
       <div className="container-fluid">
         <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
