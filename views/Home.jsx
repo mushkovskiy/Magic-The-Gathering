@@ -15,7 +15,7 @@ function Home({ cards, user }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Личный кабинет</a>
+                <a className="nav-link active" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">Корзина</a>
@@ -46,7 +46,6 @@ function Home({ cards, user }) {
           ))}
         </div>
       </div>
-
     </Layout>
   );
 }
