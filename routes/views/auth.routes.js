@@ -23,8 +23,6 @@ authRouter.get('/reg', (req, res) => {
 });
 
 authRouter.post('/reg', async (req, res) => {
-  // console.log(req.body);
-  // console.log(req.params);
   const {
     name, login, password, email, city,
   } = req.body;
