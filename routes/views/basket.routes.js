@@ -139,7 +139,7 @@ const cards = [
   // },
 ];
 
-basketRouter.get('/basket', (req, res) => {
+basketRouter.get('/create/basket', (req, res) => {
   const basket = React.createElement(Basket, { cards });
   const html = ReactDOMServer.renderToStaticMarkup(basket);
   res.write('<!DOCTYPE html>');
