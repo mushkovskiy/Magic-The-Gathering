@@ -37,13 +37,13 @@ function Main() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             {/* Нужно понять как прописать путь к картинкам в папке img и задать высоту */}
-            <img src="https://cdn.hipwallpaper.com/i/26/55/BbgROA.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
+            <img src="./img/img1.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
           </div>
           <div className="carousel-item">
-            <img src="https://images8.alphacoders.com/616/thumb-1920-616639.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
+            <img src="./img/img2.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
           </div>
           <div className="carousel-item">
-            <img src="https://img3.akspic.ru/crops/1/0/5/5/15501/15501-derevo-podzemelya_drakonov-mag-volshebnye_ochki-volshebniki_poberezhya-1920x1080.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
+            <img src="./img/img3.jpg" className="d-block w-100" alt="MAGIC: THE GATHERING" style={{ width: '1200px' }} />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
