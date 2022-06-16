@@ -7,3 +7,18 @@
   margin-top: 10px;
 }
 
+.invalidpass{
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+  background-color: #d44a4a;
+
+}
+
+.userdubble {
+  font-size: 50px;
+  margin: 0;
+  color: #72c2c2;
+  text-align: center;
+  background-color: #233b3b;
+}
