@@ -27,10 +27,10 @@ function Basket({ cards }) {
           </div>
         </div>
       </nav>
-      <div style={{ textAlign: 'right', paddingTop: '10px' }}>
+      <div style={{ textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px' }}>
         <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
       </div>
-      <h2 style={{ textAlign: 'center', paddingBottom: '20px' }}>Карточки в корзине</h2>
+      <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Карточки в корзине</h2>
       {/* Тут надо вставить имя пользователя */}
 
       <div className="container-fluid">
