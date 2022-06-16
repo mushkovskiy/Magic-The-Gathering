@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 const Card = require('./Card');
-//const User = require('../db/models/user');
+// const User = require('../db/models/user');
 
 function Home({ cards, user }) {
   return (
@@ -25,7 +25,18 @@ function Home({ cards, user }) {
               </li>
             </ul>
             <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" />
+              <select className="form-select" aria-label="Default select example">
+                <option selected>Выберите город:</option>
+                <option value="1">Санкт-Петербург</option>
+                <option value="2">Москва</option>
+                <option value="3">Саратов</option>
+                <option value="4">Выборг</option>
+                <option value="5">Уфа</option>
+                <option value="6">Нижний Новгород</option>
+                <option value="7">Сочи</option>
+                <option value="8">Мурманск</option>
+                <option value="9">Нерюнгри</option>
+              </select>
               <button className="btn btn-outline-success" type="submit">Поиск</button>
             </form>
           </div>
