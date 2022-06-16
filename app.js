@@ -31,6 +31,7 @@ const cardRouter = require('./routes/api/card.router');
 const authRouter = require('./routes/views/auth.routes');
 const homeRouter = require('./routes/views/home.routes');
 const addCards = require('./routes/views/add.cards.routers');
+const videoRouter = require('./routes/views/test.routs');
 
 const app = express();
 
@@ -50,6 +51,7 @@ app.use(basketRouter);
 app.use(addCards);
 app.use(personRouter);
 app.use(cardRouter);
+app.use(videoRouter);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
