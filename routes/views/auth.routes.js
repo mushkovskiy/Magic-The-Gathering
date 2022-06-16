@@ -5,7 +5,9 @@ const bcrypt = require('bcrypt');
 const Main = require('../../views/Main');
 const Reg = require('../../views/Reg');
 const Log = require('../../views/Log');
-const { User } = require('../db/models');
+const { User } = require('../../db/models');
+// session-file-store = function (session) {
+//   return require('./lib/session-file-store')(session);
 
 authRouter.get('/', (req, res) => {
   const element = React.createElement(Main);
@@ -22,13 +24,15 @@ authRouter.get('/reg', (req, res) => {
 });
 
 authRouter.post('/reg', async (req, res) => {
+  // console.log(req.body);
+  // console.log(req.params);
   const {
     name, login, password, email, city,
   } = req.body;
 
   const user = await User.findOne({ where: { email } });
   if (user) {
-    res.send('Такой пользователь уже есть'); // нужно заменить на красивую отрисовку
+    res.send('Такой логин или эл почта уже заняты'); // нужно заменить на красивую отрисовку
     return;
   }
   const newUser = await User.create({
@@ -38,10 +42,14 @@ authRouter.post('/reg', async (req, res) => {
     email,
     city,
   });
-  res.redirect('/login');
+  // req.session.userId = user.id;
+  res.redirect('/log');
 });
 
 authRouter.get('/log', (req, res) => {
+  // console.log(req.body);
+  // console.log(req.params);
+  // console.log(req.query);
   const element = React.createElement(Log);
   const html = ReactDOMServer.renderToStaticMarkup(element);
   res.write('<!DOCTYPE html>');
@@ -49,13 +57,9 @@ authRouter.get('/log', (req, res) => {
 });
 
 authRouter.post('/log', async (req, res) => {
-  const { login, email, password } = req.body;
-  // console.log(email);
-  // console.log(password);
-  const checkedUser = await User.findOne({ where: { email }, raw: true });
-  // console.log(checkedUser);
-  // console.log(checkedUser.email);
-  // console.log(email);
+  console.log(req.body);
+  const { login, password } = req.body;
+  const checkedUser = await User.findOne({ where: { login }, raw: true });
   const isSame = await bcrypt.compare(password, checkedUser.password);
   if (checkedUser.login === login && isSame) {
     req.session.userId = checkedUser.id; // раздаем куки

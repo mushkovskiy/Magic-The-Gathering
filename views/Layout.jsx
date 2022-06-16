@@ -8,8 +8,6 @@ function Layout({ children }) {
         {/* <link rel="stylesheet" href="/stylesheets/normalize.css" />
         <link rel="stylesheet" href="/stylesheets/application.css" /> */}
 
-        <script defer src="/public/application" />
-
         <title>The Gathering</title>
         <meta charSet="utf-8" />
       </head>

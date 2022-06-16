@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "1904",
+    "password": null,
     "database": "Magic",
     "host": "127.0.0.1",
     "dialect": "postgres"
