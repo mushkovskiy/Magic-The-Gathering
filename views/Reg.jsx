@@ -53,12 +53,20 @@ function Reg() {
           </div>
           <div className="row mb-3">
             <label htmlFor="inputCity3" className="col-sm-2 col-form-label">Город:</label>
-            <div className="col-sm-10">
-              <input name="city" type="text" placeholder="Город" className="form-control" id="inputCity3" />
-            </div>
+            <select className="form-select" aria-label="Default select example" name="city">
+              <option selected>Выберите город:</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Москва">Москва</option>
+              <option value="Саратов">Саратов</option>
+              <option value="Выборг">Выборг</option>
+              <option value="Уфа">Уфа</option>
+              <option value="Нижний Новгород">Нижний Новгород</option>
+              <option value="Сочи">Сочи</option>
+              <option value="Мурманск">Мурманск</option>
+              <option value="Нерюнгри">Нерюнгри</option>
+            </select>
           </div>
           <button type="submit" className="btn btn-primary btn-reg">Зарегистрироваться</button>
-          {/* Осталось понять как выровнять кнопку по центру */}
         </form>
       </div>
     </Layout>
