@@ -41,7 +41,7 @@ function Home({ cards, user }) {
       <div className="container-fluid">
         <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
           {cards.map((card) => (
-            <Card card={card} />
+            <Card key={card.id} card={card} />
           ))}
         </div>
       </div>
