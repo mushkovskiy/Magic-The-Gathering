@@ -1,10 +1,9 @@
 const form = document.querySelector('form');
-console.log(form);
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  await fetch('/newCard', {
+  const responce = await fetch('/newCard', {
     method: 'POST',
     body: JSON.stringify({
       title: event.target.name.value,
@@ -16,5 +15,7 @@ form.addEventListener('submit', async (event) => {
       'Content-Type': 'application/json',
     },
   });
+
+  const result = await responce.text();
   window.location.assign('/home');
 });

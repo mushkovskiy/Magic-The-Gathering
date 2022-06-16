@@ -11,6 +11,7 @@ cardRouter.post('/newCard', async (req, res) => {
     price: req.body.price,
     condition: req.body.condition,
   });
+  res.send({ status: 'okey!' });
 });
 
 module.exports = cardRouter;
