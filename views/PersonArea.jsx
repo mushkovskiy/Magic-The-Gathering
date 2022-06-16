@@ -1,8 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Card = require('./Card');
 
-function PersonArea({ cards }) {
+function PersonArea() {
   return (
     <Layout>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,16 +22,43 @@ function PersonArea({ cards }) {
                 <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Выход</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Поиск</button>
-            </form>
           </div>
         </div>
       </nav>
 
-      <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Привет, Вася!</h2>
-      {/* Тут надо вставить имя пользователя */}
+      <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Создай свою карточку:</h2>
+
+      <div style={{ width: '1000px' }}>
+        <form method="POST" action="/newCard" style={{ marginLeft: '100px' }}>
+          <div className="row mb-3" style={{ width: '700px' }}>
+            <label htmlFor="inputName1" className="col-sm-2 col-form-label">Название:</label>
+            <div className="col-sm-10">
+              <input name="login" type="text" className="form-control" id="inputName1" placeholder="Логин" />
+            </div>
+          </div>
+          <div className="row mb-3" style={{ width: '700px' }}>
+            <label htmlFor="inputPhoto1" className="col-sm-2 col-form-label">Фото:</label>
+            <div className="col-sm-10">
+              <input name="password" type="text" placeholder="Фото" className="form-control" id="inputPhoto1" />
+            </div>
+          </div>
+          <div className="row mb-3" style={{ width: '700px' }}>
+            <label htmlFor="inputPrice1" className="col-sm-2 col-form-label">Цена:</label>
+            <div className="col-sm-10">
+              <input name="login" type="text" className="form-control" id="inputPrice1" placeholder="Цена" />
+            </div>
+          </div>
+          <div className="row mb-3" style={{ width: '700px' }}>
+            <label htmlFor="inputIznos1" className="col-sm-2 col-form-label">Изношеность:</label>
+            <div className="col-sm-10">
+              <input name="password" type="password" placeholder="Степень изношености" className="form-control" id="inputIznos1" />
+            </div>
+          </div>
+          <button type="submit" className="btn btn-primary">Добавить</button>
+          {/* Осталось понять как выровнять кнопку по центру */}
+
+        </form>
+      </div>
 
     </Layout>
   );
