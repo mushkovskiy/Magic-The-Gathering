@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon app.js -e js,jsx"
+    "dev": "npx nodemon app.js -e js,jsx server.js --ignore ./sessions"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,9 @@
     "@babel/preset-react": "^7.17.12",
     "@babel/register": "^7.17.7",
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "morgan": "^1.10.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",

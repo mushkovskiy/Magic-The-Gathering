@@ -12,12 +12,14 @@ module.exports = {
       },
       login: {
         type: Sequelize.TEXT,
+        unique: true,
       },
       password: {
         type: Sequelize.TEXT,
       },
       email: {
         type: Sequelize.TEXT,
+        unique: true,
       },
       city: {
         type: Sequelize.TEXT,

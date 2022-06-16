@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function Log() {
   return (
     <Layout>
+
       <h2 style={{ textAlign: 'center', margin: '20px' }}>Авторизация</h2>
       <div style={{ width: '400px' }}>
         <form method="post" action="/log">
@@ -21,8 +22,21 @@ function Log() {
           </div>
           <button type="submit" className="btn btn-primary">Войти</button>
           {/* Осталось понять как выровнять кнопку по центру */}
+
         </form>
       </div>
+
+      {/* <form method="POST" action="/log">
+        <div className="mb-3">
+          <label htmlFor="name-input" className="form-label">Name</label>
+          <input type="text" className="form-control" id="name-input" name="name" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+          <input type="password" className="form-control" id="exampleInputPassword1" name="password" />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form> */}
 
       {/* <script defer src="/main.js" /> */}
     </Layout>

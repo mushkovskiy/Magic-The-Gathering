@@ -19,12 +19,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     login: {
       type: DataTypes.TEXT,
+      unique: true,
     },
     password: {
       type: DataTypes.TEXT,
     },
     email: {
       type: DataTypes.TEXT,
+      unique: true,
     },
     city: {
       type: DataTypes.TEXT,
