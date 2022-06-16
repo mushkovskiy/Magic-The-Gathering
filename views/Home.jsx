@@ -17,7 +17,7 @@ function Home({ cards }) {
                 <a className="nav-link active" aria-current="page" href="/">Личный кабинет</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Корзина</a>
+                <a className="nav-link" href="/create/basket">Корзина</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Выход</a>
