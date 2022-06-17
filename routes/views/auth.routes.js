@@ -59,9 +59,7 @@ authRouter.post('/log', async (req, res) => {
     // console.log(req.session);
     return res.redirect('/video');
   }
-  
-//    res.redirect('/invalidpass'); // Нужно перенести в маршрут входа в другом файле
+  res.redirect('/invalidpass'); // Нужно перенести в маршрут входа в другом файле
 });
-
 
 module.exports = authRouter;
