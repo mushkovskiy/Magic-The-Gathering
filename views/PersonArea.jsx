@@ -27,9 +27,6 @@ function PersonArea() {
         </div>
       </nav>
 
-
-      <h2 style={{ textAlign: 'center', paddingTop: '20px', marginTop: '200px' }}>Создай свою карточку:</h2>
-
       <h2 style={{ textAlign: 'center', paddingTop: '60px', paddingBottom: '60px' }}>Создай свою карточку:</h2>
 
 

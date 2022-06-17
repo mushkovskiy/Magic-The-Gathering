@@ -59,9 +59,13 @@
 
 .btn-create{
   margin-left: 350px;
+}
 
-
-.personArea-background, .basket-background, .video-background {
+.personArea-background basket-background video-background {
   background-image: url(../images/5630974.jpg);
 
+}
+
+.personArea-background {
+  background-image: url('./images/5630974.jpg');
 }
