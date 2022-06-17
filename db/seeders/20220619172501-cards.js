@@ -327,7 +327,7 @@ module.exports = {
     },
     {
       title: 'Трупоедная Слизь',
-      url: 'https://c1.scryfall.com/file/scryfall-cards',
+      url: 'https://c1.scryfall.com/file/scryfall-cards/large/front/1/7/17d22460-9eba-4dc0-bba1-946b1e88a7ce.jpg?1645816944',
       price: 105,
       condition: 'NEAR MINT',
       user_id: 6,
