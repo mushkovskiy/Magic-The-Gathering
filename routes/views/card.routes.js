@@ -6,16 +6,16 @@ const Baskets = require('../../views/Baskets');
 const { User, Basket, Card } = require('../../db/models');
 const { route } = require('./auth.routes');
 
-router.route('/add/:id')
-  .get(async (req, res) => {
+router.route('/add/card')
+  .post(async (req, res) => {
     const { userId } = req.session;
 
-    const cardId = req.params.id;
+    const cardId = req.body.cardId;
     const card = await Basket.create({
       user_id: userId,
       card_id: cardId,
     });
-    res.status('OK');
+    res.end();
   });
 
 router.route('/create/basket').get(async (req, res) => {

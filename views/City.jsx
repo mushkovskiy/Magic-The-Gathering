@@ -4,10 +4,12 @@ const Card = require('./Card');
 
 function City({ cards }) {
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
-      {cards.map((card) => (
-        <Card key={card.id} card={card} />
-      ))}
+    <div className="container-fluid home-div">
+      <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
+        {cards.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
+      </div>
     </div>
   );
 }
