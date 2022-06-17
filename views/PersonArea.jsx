@@ -27,9 +27,13 @@ function PersonArea() {
         </div>
       </nav>
 
+
+      <h2 style={{ textAlign: 'center', paddingTop: '20px', marginTop: '200px' }}>Создай свою карточку:</h2>
+
       <h2 style={{ textAlign: 'center', paddingTop: '60px', paddingBottom: '60px' }}>Создай свою карточку:</h2>
 
-      <div style={{ width: '1000px' }}>
+
+      <div style={{ width: '1000px', marginTop: '30px' }}>
         <form method="POST" action="/newCard" style={{ marginLeft: '100px' }}>
           <div className="row mb-3" style={{ width: '700px' }}>
             <label htmlFor="inputName1" className="col-sm-2 col-form-label">Название:</label>
@@ -55,7 +59,7 @@ function PersonArea() {
               <input name="condition" type="text" placeholder="Степень изношености" className="form-control" id="inputIznos1" />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Добавить</button>
+          <button type="submit" className="btn btn-primary btn-create">Добавить</button>
           {/* Осталось понять как выровнять кнопку по центру */}
 
           <script defer src="/application.js" />

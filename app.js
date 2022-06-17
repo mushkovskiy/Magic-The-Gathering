@@ -26,10 +26,14 @@ const logoutRouter = require('./routes/views/logout.routes');
 const orderRouter = require('./routes/views/order.routes');
 const personRouter = require('./routes/views/person.routes');
 const userdubbleRouter = require('./routes/views/userdubble.routes');
+
+const sendEmailRouter = require('./routes/views/sendEmail.routes');
+
 const videoRouter = require('./routes/views/video.routes');
 
 const cardApiRouter = require('./routes/api/card.routes');
 const cityApiRouter = require('./routes/api/city.routes');
+
 
 const app = express();
 
@@ -53,7 +57,12 @@ app.use(orderRouter);
 app.use(personRouter);
 app.use(userdubbleRouter);
 app.use(invalidpassRouter);
+
+app.use(userdubbleRouter);
+app.use(sendEmailRouter);
+
 app.use(videoRouter);
+
 
 app.use(cardApiRouter);
 app.use(cityApiRouter);

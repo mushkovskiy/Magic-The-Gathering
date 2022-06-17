@@ -4,7 +4,9 @@ const Layout = require('./Layout');
 function Reg() {
   return (
     <Layout>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <body className="fonReg">
+        
+      <nav className="navbar navbar-expand-lg navbar-light bg-light nav-Width">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">MAGIC: THE GATHERING</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +25,8 @@ function Reg() {
         </div>
       </nav>
 
-      <h2 style={{ textAlign: 'center', margin: '20px' }}>Регистрация</h2>
+      <div className="formReg">
+      <h2 style={{ textAlign: 'center', margin: '20px'}}>Регистрация</h2>
 
       <div style={{ width: '400px' }}>
         <form method="post" action="/reg">
@@ -69,6 +72,8 @@ function Reg() {
           <button type="submit" className="btn btn-primary btn-reg">Зарегистрироваться</button>
         </form>
       </div>
+      </div>
+      </body>
     </Layout>
   );
 }
