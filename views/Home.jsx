@@ -55,7 +55,7 @@ function Home({ cards, user }) {
         </div>
       </div>
       <script defer src="./script.js" />
-      <sqript defer src="./addCard.js" />
+      <script defer src="./addCard.js" />
     </Layout>
   );
 }

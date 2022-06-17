@@ -14,7 +14,7 @@ function Card({ card }) {
           {/* <li className="list-group-item">{card.user_id}</li> */}
         </ul>
       </div>
-          <button type="submit" className="btn btn-primary btn-add">Добавить в корзину</button>
+          <button data-id={card.id} type="submit" className="btn btn-primary btn-add">Добавить в корзину</button>
     </div>
   );
 }
