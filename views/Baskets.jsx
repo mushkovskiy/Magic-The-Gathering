@@ -1,9 +1,9 @@
 const React = require('react');
-const Layout = require('./Layout');
-const Card = require('./Card');
 const f = require('session-file-store');
+const Layout = require('./Layout');
+const Card = require('./basketCards');
 
-function Basket({ cards }) {
+function Basket({ arr }) {
   return (
     <Layout>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,7 +27,10 @@ function Basket({ cards }) {
           </div>
         </div>
       </nav>
-      <div style={{ textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px' }}>
+      <div style={{
+        textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px',
+      }}
+      >
         <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
       </div>
       <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Карточки в корзине</h2>
@@ -35,7 +38,7 @@ function Basket({ cards }) {
 
       <div className="container-fluid">
         <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
-          {cards.map((card) => (
+          {arr.map((card) => (
             <Card card={card} />
           ))}
         </div>
