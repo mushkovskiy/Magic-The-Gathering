@@ -33,7 +33,8 @@ authRouter.post('/reg', async (req, res) => {
 
   const user = await User.findOne({ where: { email } });
   if (user) {
-    res.send('Такой логин или эл почта уже заняты'); // нужно заменить на красивую отрисовку
+    // res.send('Такой логин или эл почта уже заняты'); // нужно заменить на красивую отрисовку
+    res.redirect('/userdubble');
     return;
   }
   const newUser = await User.create({
@@ -64,9 +65,10 @@ authRouter.post('/log', async (req, res) => {
   if (checkedUser.login === login && isSame) {
     req.session.userId = checkedUser.id; // раздаем куки
     // console.log(req.session);
-    return res.redirect('/home');
+    return res.redirect('/video');
   }
-  res.send('Неверно введены логин или пароль'); // нужно заменить на красивую отрисовку
+  // res.send('Неверно введены логин или пароль'); // нужно заменить на красивую отрисовку
+  res.redirect('/invalidpass');
 });
 authRouter.get('/logout', (req, res) => {
   // new filestore({ logFn() {} });
