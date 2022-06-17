@@ -13,7 +13,10 @@ function Reg() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Домой</a>
+                <a className="nav-link" aria-current="page" href="/">Домой</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="/log">Вход</a>
               </li>
             </ul>
           </div>
@@ -50,12 +53,20 @@ function Reg() {
           </div>
           <div className="row mb-3">
             <label htmlFor="inputCity3" className="col-sm-2 col-form-label">Город:</label>
-            <div className="col-sm-10">
-              <input name="city" type="text" placeholder="Город" className="form-control" id="inputCity3" />
-            </div>
+            <select className="form-select" aria-label="Default select example" name="city">
+              <option selected>Выберите город:</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Москва">Москва</option>
+              <option value="Саратов">Саратов</option>
+              <option value="Выборг">Выборг</option>
+              <option value="Уфа">Уфа</option>
+              <option value="Нижний Новгород">Нижний Новгород</option>
+              <option value="Сочи">Сочи</option>
+              <option value="Мурманск">Мурманск</option>
+              <option value="Нерюнгри">Нерюнгри</option>
+            </select>
           </div>
           <button type="submit" className="btn btn-primary btn-reg">Зарегистрироваться</button>
-          {/* Осталось понять как выровнять кнопку по центру */}
         </form>
       </div>
     </Layout>
