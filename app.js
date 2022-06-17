@@ -35,12 +35,11 @@ const cityRouter = require('./routes/api/city.routes');
 const logoutRouter = require('./routes/views/logout.routes');
 const orderRouter = require('./routes/views/order.routes');
 
-const addCards = require('./routes/views/add.cards.routers');
+const addCards = require('./routes/views/card.routes');
 
 const videoRouter = require('./routes/views/video.routes');
 const invalidpassRouter = require('./routes/views/invalidpass.routes');
 const userdubbleRouter = require('./routes/views/userdubble.routes');
-
 
 const app = express();
 
