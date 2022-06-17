@@ -1,6 +1,6 @@
 const React = require('react');
-const f = require('session-file-store');
 const Layout = require('./Layout');
+
 const Card = require('./basketCards');
 
 function Basket({ arr }) {
@@ -15,14 +15,17 @@ function Basket({ arr }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Личный кабинет</a>
+                <a className="nav-link active" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Главная страница</a>
+                <a className="nav-link" href="/home">Домой</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Выход</a>
+                <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
+              {/* <li className="nav-item">
+                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
+              </li> */}
             </ul>
           </div>
         </div>

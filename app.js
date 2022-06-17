@@ -30,11 +30,13 @@ const personRouter = require('./routes/views/person.routes');
 const cardRouter = require('./routes/api/card.router');
 const authRouter = require('./routes/views/auth.routes');
 const homeRouter = require('./routes/views/home.routes');
+const cityRouter = require('./routes/api/city.routes');
 
 const logoutRouter = require('./routes/views/logout.routes');
 const orderRouter = require('./routes/views/order.routes');
 
 const addCards = require('./routes/views/add.cards.routers');
+
 const videoRouter = require('./routes/views/video.routes');
 const invalidpassRouter = require('./routes/views/invalidpass.routes');
 const userdubbleRouter = require('./routes/views/userdubble.routes');
@@ -57,7 +59,7 @@ app.use(homeRouter);
 app.use(basketRouter);
 app.use(addCards);
 app.use(personRouter);
-
+app.use(cityRouter);
 app.use(logoutRouter);
 app.use(orderRouter);
 
@@ -65,7 +67,6 @@ app.use(cardRouter);
 app.use(videoRouter);
 app.use(invalidpassRouter);
 app.use(userdubbleRouter)
-
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */

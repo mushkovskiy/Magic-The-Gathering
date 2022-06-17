@@ -6,7 +6,6 @@ const { Card } = require('../../db/models');
 const Home = require('../../views/Home');
 
 homeRouter.get('/home', async (req, res) => {
-  // console.log(req.session);
   const user = await User.findOne({ where: { id: req.session.userId } });
   const cards = await Card.findAll();
   const home = React.createElement(Home, { cards, user });

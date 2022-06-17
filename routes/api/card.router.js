@@ -10,6 +10,7 @@ cardRouter.post('/newCard', async (req, res) => {
     url: req.body.url,
     price: req.body.price,
     condition: req.body.condition,
+    user_id: req.session.userId,
   });
   res.send({ status: 'okey!' });
 });
