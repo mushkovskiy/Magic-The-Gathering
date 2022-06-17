@@ -15,7 +15,7 @@ function Basket({ arr }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/personArea">Добавить карточку</a>
+                <a className="nav-link" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/home">Домой</a>
@@ -23,9 +23,6 @@ function Basket({ arr }) {
               <li className="nav-item">
                 <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
-              </li> */}
             </ul>
           </div>
         </div>
