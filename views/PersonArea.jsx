@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function PersonArea() {
   return (
     <Layout>
+      <body className="personArea-background">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">MAGIC: THE GATHERING</a>
@@ -60,7 +61,7 @@ function PersonArea() {
           <script defer src="/application.js" />
         </form>
       </div>
-
+      </body>
     </Layout>
   );
 }
