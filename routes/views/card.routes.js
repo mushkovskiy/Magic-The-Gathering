@@ -15,7 +15,7 @@ router.route('/add/:id')
       user_id: userId,
       card_id: cardId,
     });
-    res.status('OK');
+    res.end();
   });
 
 router.route('/create/basket').get(async (req, res) => {

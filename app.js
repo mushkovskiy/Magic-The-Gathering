@@ -19,7 +19,6 @@ const sessionConfig = {
 };
 
 const authRouter = require('./routes/views/auth.routes');
-const basketRouter = require('./routes/views/basket.routes');
 const cardRouter = require('./routes/views/card.routes');
 const homeRouter = require('./routes/views/home.routes');
 const invalidpassRouter = require('./routes/views/invalidpass.routes');
@@ -45,7 +44,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(authRouter);
-app.use(basketRouter);
 app.use(cardRouter);
 app.use(homeRouter);
 app.use(personRouter);
