@@ -6,7 +6,7 @@ const Main = require('../../views/Main');
 const Reg = require('../../views/Reg');
 const Log = require('../../views/Log');
 const { User } = require('../../db/models');
-const Basket = require('../../views/Basket');
+const Baskets = require('../../views/Baskets');
 
 const cards = [
   {
@@ -139,11 +139,11 @@ const cards = [
   // },
 ];
 
-basketRouter.get('/create/basket', (req, res) => {
-  const basket = React.createElement(Basket, { cards });
-  const html = ReactDOMServer.renderToStaticMarkup(basket);
-  res.write('<!DOCTYPE html>');
-  res.end(html);
-});
+// basketRouter.get('/create/basket', (req, res) => {
+//   const basket = React.createElement(Basket, { cards });
+//   const html = ReactDOMServer.renderToStaticMarkup(basket);
+//   res.write('<!DOCTYPE html>');
+//   res.end(html);
+// });
 
 module.exports = basketRouter;

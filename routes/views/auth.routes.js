@@ -29,7 +29,7 @@ authRouter.post('/reg', async (req, res) => {
 
   const user = await User.findOne({ where: { email } });
   if (user) {
-    alert('Такой логин или электронная почта уже заняты'); // нужно заменить на красивую отрисовку
+    res.redirect('/userdubble');
     return;
   }
   const newUser = await User.create({
@@ -57,18 +57,11 @@ authRouter.post('/log', async (req, res) => {
   if (checkedUser.login === login && isSame) {
     req.session.userId = checkedUser.id; // раздаем куки
     // console.log(req.session);
-    return res.redirect('/home');
+    return res.redirect('/video');
   }
-  alert('Неверно введены логин или пароль'); // нужно заменить на красивую отрисовку
+  
+//    res.redirect('/invalidpass'); // Нужно перенести в маршрут входа в другом файле
 });
-// authRouter.get('/logout', (req, res) => {
-//   // new filestore({ logFn() {} });
-//   req.session.destroy((err) => {
-//     if (err) { console.log(err.message); }
-//   });
-//   res.clearCookie('user_sid'); // чистим куки. название берем из app.js : const sessionConfig = {... name: 'user_sid',...}
-//   // при переходе на ручку /logout очищаем сессию и редеректимся на главную страницу
-//   res.redirect('/');
-// });
+
 
 module.exports = authRouter;

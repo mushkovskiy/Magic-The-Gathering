@@ -36,7 +36,11 @@ const logoutRouter = require('./routes/views/logout.routes');
 const orderRouter = require('./routes/views/order.routes');
 
 const addCards = require('./routes/views/add.cards.routers');
-const { application } = require('express');
+
+const videoRouter = require('./routes/views/video.routes');
+const invalidpassRouter = require('./routes/views/invalidpass.routes');
+const userdubbleRouter = require('./routes/views/userdubble.routes');
+
 
 const app = express();
 
@@ -60,6 +64,9 @@ app.use(logoutRouter);
 app.use(orderRouter);
 
 app.use(cardRouter);
+app.use(videoRouter);
+app.use(invalidpassRouter);
+app.use(userdubbleRouter)
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
