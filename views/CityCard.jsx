@@ -6,7 +6,7 @@ function CityCard({ card }) {
         <div className="card" style={{ width: '18rem' }}>
           <img src={card['Cards.url']} className="card-img-top" alt="Cards" />
           <div className="card-body">
-            <h5 className="card-title">{['Cards.title']}</h5>
+            <h5 className="card-title">{card['Cards.title']}</h5>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">{card['Cards.condition']}</li>

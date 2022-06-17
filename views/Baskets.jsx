@@ -23,9 +23,6 @@ function Basket({ arr }) {
               <li className="nav-item">
                 <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
-              </li> */}
             </ul>
           </div>
         </div>
@@ -34,7 +31,9 @@ function Basket({ arr }) {
         textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px',
       }}
       >
-        <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
+        <form method="POST" action="/sendEmail">
+          <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
+        </form>
       </div>
       <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Карточки в корзине</h2>
       {/* Тут надо вставить имя пользователя */}

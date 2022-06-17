@@ -39,3 +39,23 @@
 .nav-link:hover {
   color: whitesmoke;
 }
+.containerLog{
+  margin-top: 300px;
+}
+.fonLog{
+  background-image: url('./images/1920x1080-px-digital-art-lotus-flowers-Magic-The-Gathering-skull-1340647.jpeg');
+}
+.fonReg{
+  background-image: url('./images/157-1570788_magic-the-gathering-jace.jpeg');
+}
+.formReg{
+  margin-top: 220px;
+}
+.btn-delete{
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.btn-create{
+  margin-left: 350px;
+}

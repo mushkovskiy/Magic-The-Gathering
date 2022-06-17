@@ -14,13 +14,13 @@ const cookieParser = require('cookie-parser');
 
 const sessionConfig = {
   store: new FileStore(),
-  name: 'user_sid', // Имя куки для хранения id сессии. По умолчанию - connect.sid
-  secret: process.env.SESSION_SECRET ?? 'test', // Секретное слово для шифрования, может быть любым
-  resave: false, // Пересохранять ли куку при каждом запросе
-  saveUninitialized: false, // Создавать ли сессию без инициализации ключей в req.session
+  name: 'user_sid',
+  secret: process.env.SESSION_SECRET ?? 'test',
+  resave: false,
+  saveUninitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 12, // Срок истечения годности куки в миллисекундах
-    httpOnly: true, // Серверная установка и удаление куки, по умолчанию true
+    maxAge: 1000 * 60 * 60 * 12,
+    httpOnly: true,
   },
 };
 const { sequelize } = require('./db/models');
@@ -40,7 +40,7 @@ const addCards = require('./routes/views/add.cards.routers');
 const videoRouter = require('./routes/views/video.routes');
 const invalidpassRouter = require('./routes/views/invalidpass.routes');
 const userdubbleRouter = require('./routes/views/userdubble.routes');
-
+const sendEmailRouter = require('./routes/views/sendEmail.routes');
 
 const app = express();
 
@@ -66,7 +66,8 @@ app.use(orderRouter);
 app.use(cardRouter);
 app.use(videoRouter);
 app.use(invalidpassRouter);
-app.use(userdubbleRouter)
+app.use(userdubbleRouter);
+app.use(sendEmailRouter);
 
 app.listen(PORT, async () => {
   /* eslint-disable no-console */
