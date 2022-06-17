@@ -6,6 +6,7 @@ const Card = require('./basketCards');
 function Basket({ arr }) {
   return (
     <Layout>
+    <div className="basket-background">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">MAGIC: THE GATHERING</a>
@@ -28,7 +29,7 @@ function Basket({ arr }) {
         </div>
       </nav>
       <div style={{
-        textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px',
+        textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '35px',
       }}
       >
         <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
@@ -43,6 +44,7 @@ function Basket({ arr }) {
           ))}
         </div>
       </div>
+    </div>
     </Layout>
   );
 }
