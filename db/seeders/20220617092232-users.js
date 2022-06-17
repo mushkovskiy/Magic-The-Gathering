@@ -1,20 +1,20 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Users', [{
       name: 'Настя',
       login: 'Nastya',
-      password: '',
+      password: '123456',
       email: 'nastya@mail.ru',
       city: 'Санкт-Петербург',
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      name: ':Женя',
+      name: 'Женя',
       login: 'Jack',
-      password: '',
+      password: '123456',
       email: 'john@mail.ru',
       city: 'Сочи',
       createdAt: new Date(),
@@ -23,7 +23,7 @@ module.exports = {
     {
       name: 'Ира',
       login: 'Iran',
-      password: '',
+      password: '123456',
       email: 'iran@mail.ru',
       city: 'Москва',
       createdAt: new Date(),
@@ -32,7 +32,7 @@ module.exports = {
     {
       name: 'Павел',
       login: 'Pavlik',
-      password: '',
+      password: '123456',
       email: 'pavlik@mail.ru',
       city: 'Краснодар',
       createdAt: new Date(),
@@ -41,7 +41,7 @@ module.exports = {
     {
       name: 'Петя',
       login: 'Pit',
-      password: '',
+      password: '123456',
       email: 'pit@mail.ru',
       city: 'Мурманск',
       createdAt: new Date(),
@@ -50,7 +50,7 @@ module.exports = {
     {
       name: 'Леха',
       login: 'Lexa',
-      password: 'password',
+      password: '123456',
       email: 'lexa@mail.ru',
       city: 'Нерюнгри',
       createdAt: new Date(),
