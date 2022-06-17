@@ -1,7 +1,7 @@
 const React = require('react');
+const f = require('session-file-store');
 const Layout = require('./Layout');
 const Card = require('./Card');
-const f = require('session-file-store');
 
 function Basket({ cards }) {
   return (
@@ -15,19 +15,25 @@ function Basket({ cards }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Личный кабинет</a>
+                <a className="nav-link active" aria-current="page" href="/personArea">Добавить карточку</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Главная страница</a>
+                <a className="nav-link" href="/home">Домой</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Выход</a>
+                <a className="nav-link" href="/logout" aria-disabled="true">Выход</a>
               </li>
+              {/* <li className="nav-item">
+                <a className="nav-link disabled" href="/logout" tabIndex="-1" aria-disabled="true">Выход</a>
+              </li> */}
             </ul>
           </div>
         </div>
       </nav>
-      <div style={{ textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px' }}>
+      <div style={{
+        textAlign: 'right', paddingTop: '10px', position: 'fixed', right: '50px',
+      }}
+      >
         <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
       </div>
       <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Карточки в корзине</h2>
