@@ -6,6 +6,7 @@ const Card = require('./Card');
 function Home({ cards, user }) {
   return (
     <Layout>
+      <body className="personArea-background">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">MAGIC: THE GATHERING</a>

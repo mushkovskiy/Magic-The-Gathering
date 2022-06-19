@@ -6,6 +6,7 @@ const Card = require('./basketCards');
 function Basket({ arr }) {
   return (
     <Layout>
+      <body className="personArea-background">
     <div className="basket-background">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -36,8 +37,8 @@ function Basket({ arr }) {
           <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
         </form>
       </div>
-      <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Корзина</h2>
-      {/* Тут надо вставить имя пользователя */}
+
+      <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Ваша корзина:</h2>
 
       <div className="container-fluid">
         <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '10px' }}>
@@ -47,6 +48,7 @@ function Basket({ arr }) {
         </div>
       </div>
     </div>
+    </body>
     </Layout>
   );
 }

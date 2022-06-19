@@ -15,6 +15,10 @@ function Card({ card }) {
           <li className="list-group-item">{`Город: ${card.city}`}</li>
         </ul>
       </div>
+      <a href={`/add/${card.id}`}>
+        <button type="submit" className="btn btn-primary btn-delete">Войти</button>
+      </a>
+
     </div>
   );
 }

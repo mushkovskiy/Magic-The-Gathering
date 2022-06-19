@@ -55,6 +55,7 @@ function PersonArea() {
                 <input name="condition" type="text" placeholder="Степень изношености" className="form-control" id="inputIznos1" />
               </div>
             </div>
+
             <button type="submit" className="btn btn-primary btn-create">Добавить</button>
 
             <script defer src="/application.js" />
