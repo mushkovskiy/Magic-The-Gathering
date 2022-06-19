@@ -36,11 +36,11 @@ function Basket({ arr }) {
           <button className="btn btn-outline-success btn-basket-order" type="submit">Отправить заказ</button>
         </form>
       </div>
-      <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Карточки в корзине</h2>
+      <h2 style={{ textAlign: 'center', paddingBottom: '20px', paddingTop: '10px' }}>Корзина</h2>
       {/* Тут надо вставить имя пользователя */}
 
       <div className="container-fluid">
-        <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '100px' }}>
+        <div className="row row-cols-1 row-cols-md-3 g-4" style={{ paddingLeft: '10px' }}>
           {arr.map((card) => (
             <Card card={card} />
           ))}

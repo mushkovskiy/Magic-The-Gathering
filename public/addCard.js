@@ -1,6 +1,7 @@
 const container = document.querySelector('.row-cols-1');
 console.log(container);
 container.addEventListener('click', async (event) => {
+  event.preventDefault();
   if (event.target.classList.contains('btn-add')) {
     console.log(event.target.dataset.id);
     const response = await fetch('/add/card', {

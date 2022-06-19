@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function Reg() {
   return (
     <Layout>
-      <body className="fonReg">
+      <body>
         
       <nav className="navbar navbar-expand-lg navbar-light bg-light nav-Width">
         <div className="container-fluid">
